@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 def conectado(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
 
-    client.publish("altairlbn2020@gmail.com/t2")
+    client.publish("gabyllanga-15@outlook.com/t1")
 
 def nuevoMensaje(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
@@ -15,7 +15,7 @@ def nuevoMensaje(client, userdata, msg):
     if mensaje=='OFF':
         print('apagado')
 client= mqtt.Client()  
-client.username_pw_set('altairlbn2020@gmail.com', password='Onepiece746')
+client.username_pw_set('gabyllanga-15@outlook.com', password='gabyllanga')
 client.on_connect = conectado
 client.on_message = nuevoMensaje
 
